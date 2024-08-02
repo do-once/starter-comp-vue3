@@ -1,0 +1,59 @@
+{
+  "name": "@doonce/starter-comp-vue3",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Starter template for Vue3 component.",
+  "keywords": [
+    "vue3",
+    "component"
+  ],
+  "homepage": "https://github.com/do-once/starter-comp-vue3",
+  "bugs": {
+    "url": "https://github.com/do-once/starter-comp-vue3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/do-once/starter-comp-vue3.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "GuangHui",
+    "email": "bryanadamss@foxmail.com",
+    "url": "https://github.com/BryanAdamss"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vite": "3.1.8",
+    "vitest": "0.24.3",
+    "@vitejs/plugin-vue": "3.1.2",
+    "typescript": "5.4.5",
+    "vite-plugin-dts": "4.0.0-beta.2"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "^10.11.0",
+    "vue": "^3.4.31"
+  }
+}

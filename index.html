@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoonceHelloVue3Comp Example</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="module">
+      import { createApp, h } from 'vue'
+      import InstallObj, { useHello } from './src/index.ts'
+
+      createApp({
+        template: `<DoonceHelloVue3Comp :first-name="'bryan'" :last-name="'adamss'">
+          <template #title>hello</template>
+          <template #box-foo>box-foo</template>
+          <template #list-bar>list-bar</template>
+          </DoonceHelloVue3Comp>`,
+
+        setup(props) {
+          const { onNameChange } = useHello()
+
+          onNameChange(name => {
+            console.log('name :>> ', name)
+          })
+        }
+      })
+        .use(InstallObj)
+        .mount('#app')
+    </script>
+  </body>
+</html>
